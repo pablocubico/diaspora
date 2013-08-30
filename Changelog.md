@@ -1,5 +1,18 @@
 # Head
 
+## Rails 4 - Manual action required
+Please edit `config/initializers/secret_token.rb`, replacing `secret_token` with
+`secret_key_base`.
+
+```ruby
+# Old
+Rails.application.config.secret_token = '***********...'
+
+# New
+Diaspora::Application.config.secret_key_base = '*************...'
+```
+
+
 ## Refactor
 * Drop number of followers from tags page [#4717](https://github.com/diaspora/diaspora/issues/4717)
 * Remove some unused beta code [#4738](https://github.com/diaspora/diaspora/issues/4738)
