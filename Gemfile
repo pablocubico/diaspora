@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.17'
+gem 'rails', '4.0.3'
+
+# Legacy Rails features, remove me!
+
+# caches_page
+gem 'actionpack-action_caching'
+gem 'actionpack-page_caching'
 
 # Appserver
 
@@ -25,6 +31,10 @@ gem 'galetahub-simple_captcha', '0.1.5', :require => 'simple_captcha'
 gem 'sidekiq', '2.17.2'
 gem 'sinatra', '1.3.3'
 
+# Compression
+
+gem 'uglifier', '2.4.0'
+
 # Configuration
 
 gem 'configurate', '0.0.8'
@@ -33,6 +43,12 @@ gem 'configurate', '0.0.8'
 
 gem 'rack-cors', '0.2.8', :require => 'rack/cors'
 
+# CSS
+
+gem 'bootstrap-sass', '2.3.2.2'
+gem 'compass-rails',  '1.1.3'
+gem 'sass-rails',     '4.0.1'
+
 # Database
 
 ENV['DB'] ||= 'mysql'
@@ -40,7 +56,7 @@ ENV['DB'] ||= 'mysql'
 gem 'mysql2', '0.3.14' if ENV['DB'] == 'all' || ENV['DB'] == 'mysql'
 gem 'pg',     '0.17.1' if ENV['DB'] == 'all' || ENV['DB'] == 'postgres'
 
-gem 'activerecord-import', '0.3.1'
+gem 'activerecord-import', '0.4.1'
 gem 'foreigner',           '1.6.1'
 
 # File uploading
@@ -50,11 +66,21 @@ gem 'fog',         '1.19.0'
 gem 'mini_magick', '3.7.0'
 gem 'remotipart',  '1.2.1'
 
+# Icons
+
+gem 'entypo-rails', '2.0.2'
+
+# JavaScript
+
+gem 'backbone-on-rails', '1.1.0'
+gem 'handlebars_assets', '0.12.0'
+gem 'jquery-rails',      '3.0.4'
+
 # Localization
 
 gem 'http_accept_language', '1.0.2'
 gem 'i18n-inflector-rails', '1.0.7'
-gem 'rails-i18n',           '0.7.4'
+gem 'rails-i18n',           '4.0.1'
 
 # Mail
 
@@ -69,10 +95,6 @@ gem 'redcarpet',        '3.0.0'
 gem 'roxml',            '3.1.6'
 gem 'ruby-oembed',      '0.8.9'
 gem 'opengraph_parser', '0.2.3'
-
-
-# Please remove when migrating to Rails 4
-gem 'strong_parameters'
 
 
 # Services
@@ -107,42 +129,20 @@ gem 'rails-timeago'
 # https://github.com/rubyzip/rubyzip#important-note
 gem 'zip-zip'
 
-### GROUPS ####
 
-group :assets do
 
-  # Icons
-  gem 'entypo-rails'
+# Windows and OSX have an execjs compatible runtime built-in, Linux users should
+# install Node.js or use 'therubyracer'.
+#
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
 
-  # CSS
-
-  gem 'bootstrap-sass', '2.2.2.0'
-  gem 'compass-rails',  '1.0.3'
-  gem 'sass-rails',     '3.2.6'
-
-  # Compression
-
-  gem 'uglifier', '2.1.2'
-
-  # JavaScript
-
-  gem 'backbone-on-rails', '1.1.0'
-  gem 'handlebars_assets', '0.12.0'
-  gem 'jquery-rails',      '3.0.4'
-
-  # Windows and OSX have an execjs compatible runtime built-in, Linux users should
-  # install Node.js or use 'therubyracer'.
-  #
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-
-  # gem 'therubyracer', :platform => :ruby
-end
+# gem 'therubyracer', :platform => :ruby
 
 group :production do # we don't install these on travis to speed up test runs
 
   # Administration
 
-  gem 'rails_admin', '0.4.9'
+  gem 'rails_admin', '0.6.1'
 
   # Analytics
 
@@ -202,7 +202,7 @@ group :test do
 
   gem 'factory_girl_rails', '4.3.0'
   gem 'timecop',            '0.7.1'
-  gem 'webmock',            '1.16.1', :require => false
+  gem 'webmock',            '1.17.2', :require => false
 end
 
 
@@ -214,6 +214,6 @@ group :development, :test do
   gem 'cucumber-rails',     '1.4.0', :require => false
 
   # Jasmine (client side application tests (JS))
-  gem 'jasmine', '1.3.2'
+  gem 'jasmine', '2.0.0'
   gem 'sinon-rails',	    '1.7.3'
 end
