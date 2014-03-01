@@ -29,7 +29,7 @@ factory = {
       "id" : this.id.next(),
       "text" : "This is a comment!"
     }
-    
+
     return new app.models.Comment(_.extend(defaultAttrs, overrides))
   },
 
@@ -142,4 +142,4 @@ factory = {
   }
 }
 
-factory.author = factory.userAttrs
+factory.author = factory.userAttrs;
