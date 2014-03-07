@@ -10,7 +10,7 @@ app.views.AspectMembership = Backbone.View.extend({
   initialize: function() {
     // attach event handler, removing any previous instances
     var selector = '.dropdown.aspect_membership .dropdown_list > li';
-    $('body')
+    $(document)
       .off('click', selector)
       .on('click', selector, _.bind(this._clickHandler, this));
 
