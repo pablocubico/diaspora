@@ -1,7 +1,6 @@
 #home_user_badge {
 	min-height: 50px;
-	margin-bottom: 20px;
-	margin-left: 4px;
+	margin: 20px;
 
 	img {
 		float: left;
@@ -20,19 +19,18 @@
 	}
 }
 
-#stream_selection {
-	& > li {
-		margin-bottom: 10px;
-	}
-}
-
 #aspects_list {
+
+    background: #111;
+
 	.icons-check_yes_ok {
 		height:18px;
 		width:18px;
-		background: url('icons/check_yes_ok.png') no-repeat;
+		background: url('icons/orange-tick-icon.png') no-repeat;
+		background-size: 100% auto;
 		float: left;
 		visibility: hidden;
+		margin-right: 5px;
 	}
 
 	.selected {
@@ -40,7 +38,7 @@
 	}
 
 	.selected + a {
-		color: #333333;
+		color: #eee;
 	}
 }
 

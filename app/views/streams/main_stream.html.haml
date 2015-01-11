@@ -23,7 +23,7 @@
 
 .container-fluid
   .row-fluid
-    .offset1.span2#leftNavBar
+    #leftNavBar
       #home_user_badge
         = owner_image_link
         %h4
@@ -41,11 +41,11 @@
         %li
           = render 'tags/followed_tags_listings'
     
-    .span6
+    .leftNavBarOffset.span8
       #aspect_stream_container.stream_container
         = render 'aspects/aspect_stream', :stream => @stream
 
-    .span2.rightBar
+    .span1.rightBar
       #selected_aspect_contacts.section
         .title.no_icon
           %h5.stream_title

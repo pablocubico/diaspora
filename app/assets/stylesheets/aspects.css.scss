@@ -11,12 +11,16 @@
       display: none;
     }
     &.selected {
+      color: #eee;
       .icon-ok { display: inline-block;}
       .icon-refresh { display: none;}
     }
     &.loading {
       .icon-refresh { display: inline-block;}
       .icon-ok { display: none;}
+    }
+    .selectable {
+      color: #ccc;
     }
     a {
       .text {

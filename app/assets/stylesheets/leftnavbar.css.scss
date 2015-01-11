@@ -1,11 +1,24 @@
+.leftNavBarOffset { /* This class is actually applied to the Main Stream */
+  margin-left: 19% !important;  
+}
+
 #leftNavBar {
+
+  width: 19%; /* Main Stream has margin left: 19% */
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 40px;
+  background: #222222;
+  height: 100%;
 
   .avatar {
     width: 50px;
     height: 50px;
+    border-radius: 50px;
   }
 
-  color: #222222;
+  color: #eee;
 
   ul {
     margin: 0px;
@@ -15,17 +28,15 @@
 
   a {
     color: $link-grey;
-    font-weight: bold;
     text-decoration: none;
   }
 
-  .selected { color: $black; }
-  .selected a { color: $black; }
+  .selected { margin-right: 10px; }
 
   .hoverable {
     display: block;
-    margin-right: 6px;
-    padding: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
     &:hover { background-color: $background-blue; }
 
     .label {
@@ -36,9 +47,9 @@
 
   .selectable {
     display: block;
-    margin-left: 21px;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: #ddd;
   }
 
   .action {
@@ -47,9 +58,11 @@
     display: none;
     float: right;
     margin: 3px;
+    color: #ddd;
   }
 
   .hoverable:hover  > .action {
     display: block;
   }
+
 }
