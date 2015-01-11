@@ -26,6 +26,7 @@
 @import "tag";
 @import "photo";
 @import "chat";
+@import "uxpodoverrides";
 
 /* ====== media ====== */
 .media {
@@ -60,7 +61,7 @@ body {
   };
   background-color: $background-white;
   font: {
-    family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    family: "Titillium Web", Helvetica, Arial, sans-serif;
     size: 13px;
   };
 }

@@ -24,6 +24,7 @@
 .container-fluid
   .row-fluid
     #leftNavBar
+      %img{ :src => AppConfig.pod_uri.to_s + "assets/branding/diaspora-white-400x100.png", :alt => "diaspora*", :width=> "100%", :class => "leftNavBarLogo" } 
       #home_user_badge
         = owner_image_link
         %h4
@@ -34,6 +35,10 @@
           = link_to t("streams.multi.title"), stream_path, :rel => 'backbone'
         %li.hoverable{:data => {:stream => 'activity'}}
           = link_to t("streams.activity.title"), activity_stream_path, :rel => 'backbone'
+        %li.hoverable
+          = link_to "Messages", "/conversations"
+          .badge
+            5
         %li.hoverable{:data => {:stream => 'mentions'}}
           = link_to t('streams.mentions.title'), mentioned_stream_path, :rel => 'backbone'
         %li.all_aspects
@@ -45,7 +50,7 @@
       #aspect_stream_container.stream_container
         = render 'aspects/aspect_stream', :stream => @stream
 
-    .span1.rightBar
+    .span2.rightBar
       #selected_aspect_contacts.section
         .title.no_icon
           %h5.stream_title

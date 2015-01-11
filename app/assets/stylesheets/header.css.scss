@@ -4,8 +4,9 @@
 }
 
 body > header {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.9);
-  background: image-url('header-bg.png') rgb(40,35,35);
+  margin-left: 19%;
+  box-shadow: 0;
+  background: #111;
   z-index: 1001;
   padding: 6px 0;
   color: #CCC;
@@ -19,6 +20,8 @@ body > header {
 
   > div > div.container {
     height: 26px;
+    width: 81%;
+    margin-left: 0;
   }
 
   .diaspora_header_logo {
@@ -54,7 +57,7 @@ body > header {
     display: inline-block;
     margin-top: 2px;
     float: left;
-    width: 61px;
+    width: 500px;
 
     a:hover { text-decoration: none; }
 
@@ -100,6 +103,7 @@ body > header {
     #notification_badge, #conversations_badge {
       float: left;
       padding: 0px 3px;
+      margin-left: 5px;
     }
 
     #conversations_badge {

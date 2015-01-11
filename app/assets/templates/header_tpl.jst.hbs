@@ -1,24 +1,5 @@
 <div class="container" style="position:relative;">
 
-  <a href="/stream">
-    <div alt="Logo_small" class="diaspora_header_logo branding-header-logo">
-    </div>
-  </a>
-
-  <span class="header-nav">
-    <span>
-        <a href="/stream">
-          {{t "my_stream"}}
-        </a>
-    </span>
-
-    <span>
-        <a href="/activity">
-          {{t "my_activity"}}
-        </a>
-     </span>
-  </span>
-
   <div id="nav_badges">
     <div class="badge badge-inverse" id="notification_badge">
       <div class="icons-notifications_grey" >
@@ -29,42 +10,32 @@
         </a>
       </div>
     </div>
+    <div style="float: left;"><a href="#">pablo@diaspora.local</a> started sharing with you.</div>
 
-    <div class="badge badge-inverse" id="conversations_badge">
-     <div class="icons-mail_grey" >
-        <a href="/conversations" title="{{t "header.conversations"}}" class="badge_link" >
-          <div class="badge_count {{#unless current_user.unread_messages_count}} hidden {{/unless}}">
-            {{current_user.unread_messages_count}}
-          </div>
+    <div id="notification_dropdown">
+      <div class="header">
+        <div class="pull-right">
+          <a href="#" id="mark_all_read_link" class="{{#unless current_user.notifications_count}}disabled{{/unless}}">
+            {{t "header.mark_all_as_read"}}
+          </a>
+        </div>
+
+        <h4>
+          {{t "header.recent_notifications"}}
+        </h4>
+      </div>
+
+      <div class="notifications">
+        <div class="ajax_loader">
+          <img alt="Ajax-loader" src="{{imageUrl "ajax-loader.gif"}}">
+        </div>
+      </div>
+      <div class="view_all">
+        <a href="/notifications" id="view_all_notifications">
+          {{t "header.view_all"}}
         </a>
       </div>
     </div>
-
-
-      <div id="notification_dropdown">
-        <div class="header">
-          <div class="pull-right">
-            <a href="#" id="mark_all_read_link" class="{{#unless current_user.notifications_count}}disabled{{/unless}}">
-              {{t "header.mark_all_as_read"}}
-            </a>
-          </div>
-
-          <h4>
-            {{t "header.recent_notifications"}}
-          </h4>
-        </div>
-
-        <div class="notifications">
-          <div class="ajax_loader">
-            <img alt="Ajax-loader" src="{{imageUrl "ajax-loader.gif"}}">
-          </div>
-        </div>
-        <div class="view_all">
-          <a href="/notifications" id="view_all_notifications">
-            {{t "header.view_all"}}
-          </a>
-        </div>
-      </div>
   </div>
 
   <ul class="dropdown" id="user_menu">

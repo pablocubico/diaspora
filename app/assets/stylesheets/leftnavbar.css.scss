@@ -1,5 +1,6 @@
 .leftNavBarOffset { /* This class is actually applied to the Main Stream */
   margin-left: 19% !important;  
+  width: 63% !important;
 }
 
 #leftNavBar {
@@ -8,9 +9,13 @@
   position: fixed;
   left: 0;
   top: 0;
-  padding-top: 40px;
-  background: #222222;
+  background: #161616;
   height: 100%;
+
+  .leftNavBarLogo {
+    width: 80%;
+    padding: 30px 10% 10px;
+  }
 
   .avatar {
     width: 50px;
@@ -37,7 +42,14 @@
     display: block;
     padding: 10px 20px;
     cursor: pointer;
-    &:hover { background-color: $background-blue; }
+    &:hover { 
+      background-color: $background-blue; 
+      color: #222;
+    }
+    &.selected {
+      margin: 0px;
+      color: white;
+    }
 
     .label {
       background-color: $background-grey;
