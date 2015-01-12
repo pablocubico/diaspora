@@ -8,4 +8,9 @@
 - content_for :page_title do
   = t('_help')
 
-#help
+.container-fluid.no-padding-container
+  .row-fluid
+    = render 'shared/left_nav_bar'
+
+    .span10.leftNavBarOffset
+      #help
