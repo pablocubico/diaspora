@@ -1,0 +1,22 @@
+#leftNavBar
+  %img{ :src => AppConfig.pod_uri.to_s + "assets/branding/diaspora-white-400x100.png", :alt => "diaspora*", :width=> "100%", :class => "leftNavBarLogo" } 
+  #home_user_badge
+    = owner_image_link
+    %h4
+      = link_to current_user.first_name, local_or_remote_person_path(current_user.person)
+
+  %ul#stream_selection
+    %li.hoverable{:data => {:stream => 'stream'}}
+      = link_to t("streams.multi.title"), stream_path, :rel => 'backbone'
+    %li.hoverable{:data => {:stream => 'activity'}}
+      = link_to t("streams.activity.title"), activity_stream_path, :rel => 'backbone'
+    %li.hoverable
+      = link_to "Messagessss", "/conversations"
+      .badge
+        5
+    %li.hoverable{:data => {:stream => 'mentions'}}
+      = link_to t('streams.mentions.title'), mentioned_stream_path, :rel => 'backbone'
+    %li.all_aspects
+      = render 'aspects/aspect_listings', :stream => @stream
+    %li
+      = render 'tags/followed_tags_listings'

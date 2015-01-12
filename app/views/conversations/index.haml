@@ -6,7 +6,10 @@
 
 .container-fluid#conversations_container
   .row-fluid
-    .span4
+
+    = render 'shared/left_nav_bar'
+
+    .span3.leftNavBarOffset
       #left_pane
         #left_pane_header
           %h3
@@ -23,7 +26,7 @@
                 = t('.no_messages')
             = will_paginate @conversations, :renderer => WillPaginate::ActionView::BootstrapLinkRenderer
 
-    .span8
+    .span6
       - if @conversation
         .stream_container
           #conversation_show

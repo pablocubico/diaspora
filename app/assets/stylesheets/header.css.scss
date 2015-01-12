@@ -114,11 +114,9 @@ body > header {
 
     #notification_badge.active {
       z-index: 10;
-      background-color: #fff;
-      border: 1px solid $border-dark-grey;
-      border-bottom: 0px;
-      margin-left: 0px;
-      padding-bottom: 12px;
+      a {
+        color: white;
+      }
     }
 
     #notification_dropdown {

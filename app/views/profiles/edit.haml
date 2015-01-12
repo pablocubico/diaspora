@@ -4,22 +4,27 @@
 
 .bootstrap_header_padding
 
-.container
+.container-fluid.no-padding-container
   .row-fluid
-    .span12
-      #section_header
-        %h2
-          = t('settings')
-        = render 'shared/settings_nav'
+    = render 'shared/left_nav_bar'
 
-.container
-  .row-fluid
-    .span3
-    .span6
-      - content_for :submit_block do
-        = link_to t('cancel'), local_or_remote_person_path(current_user.person), :class => "btn"
-        = submit_tag t('.update_profile'), :class => "creation", :id => "update_profile", :class => "btn"
-      = render :partial => 'edit', :locals => {:person => @person, 
-        :profile => @profile, :aspect => @aspect, :step => @step}
-    .span3
+    .span6.leftNavBarOffset
+
+      .container
+        .row-fluid
+          .span12
+            #section_header
+              %h2
+                = t('settings')
+              = render 'shared/settings_nav'
+
+      .container
+        .row-fluid
+          .span6
+            - content_for :submit_block do
+              = link_to t('cancel'), local_or_remote_person_path(current_user.person), :class => "btn"
+              = submit_tag t('.update_profile'), :class => "creation", :id => "update_profile", :class => "btn"
+            = render :partial => 'edit', :locals => {:person => @person, 
+              :profile => @profile, :aspect => @aspect, :step => @step}
+          .span3
 
