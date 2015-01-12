@@ -13,6 +13,9 @@
 
 <div id="author_info">
   <h2>
+    {{#linkToPerson this}}
+      {{{personImage this "large"}}}
+    {{/linkToPerson}}
     <span id="name">{{name}}</span>
     <span id="diaspora_handle">{{diaspora_id}}</span>
     {{#if show_profile_btns}}
