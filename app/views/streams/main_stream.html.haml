@@ -21,38 +21,27 @@
         %h3
           = t('aspects.index.introduce_yourself')
 
-.container-fluid
-  .row-fluid
-    .offset1.span2#leftNavBar
-      #home_user_badge
-        = owner_image_link
-        %h4
-          = link_to current_user.first_name, local_or_remote_person_path(current_user.person)
+.container-fluid.no-gutter
 
-      %ul#stream_selection
-        %li.hoverable{:data => {:stream => 'stream'}}
-          = link_to t("streams.multi.title"), stream_path, :rel => 'backbone'
-        %li.hoverable{:data => {:stream => 'activity'}}
-          = link_to t("streams.activity.title"), activity_stream_path, :rel => 'backbone'
-        %li.hoverable{:data => {:stream => 'mentions'}}
-          = link_to t('streams.mentions.title'), mentioned_stream_path, :rel => 'backbone'
-        %li.all_aspects
-          = render 'aspects/aspect_listings', :stream => @stream
-        %li
-          = render 'tags/followed_tags_listings'
+  = render 'shared/left_navbar'
 
-    .span6
-      #aspect_stream_container.stream_container
-        = render 'aspects/aspect_stream', :stream => @stream
+  .leftNavBarPadder
 
-    .span2.rightBar
-      #selected_aspect_contacts.section
-        .title.no_icon
-          %h5.stream_title
-            = @stream.title
-        .content
+    .container-fluid.no-gutter
+      .row-fluid
+        
+        .span10
+          #aspect_stream_container.stream_container
+            = render 'aspects/aspect_stream', :stream => @stream
 
-      = render 'shared/right_sections'
+        .span2.rightBar
+          #selected_aspect_contacts.section
+            .title.no_icon
+              %h5.stream_title
+                = @stream.title
+            .content
 
-      %a{:id=>"back-to-top", :title=>"#{t('layouts.application.back_to_top')}", :href=>"#"}
-        &#8679;
+          = render 'shared/right_sections'
+
+          %a{:id=>"back-to-top", :title=>"#{t('layouts.application.back_to_top')}", :href=>"#"}
+            &#8679;

@@ -43,7 +43,11 @@
 }
 
 #main_stream .stream_element {
-  border-bottom: 1px solid $border-grey;
+  background: rgba(255,255,255,.85);
+  border: 1px solid white;
+  box-shadow: 0 0 2px;
+  margin-bottom: 10px;
+  /*border-bottom: 1px solid $border-grey;*/
   padding: 10px;
   & > .media {
     & > .img > .avatar.small {
