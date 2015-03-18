@@ -89,16 +89,30 @@
 	/* ---- end override app/stylesheets/vendor/autoSuggest.css ---- */
 }
 
-.rightBar {
+.rightBarPadder {
+  padding-right: 200px !important;
+}
 
-  padding-top: 20px;
+.rightBarInnerPadding {
+  padding: 10px;
+}
+
+.rightBar {
+  background: rgba(0,0,0,.8);
+  border-left: 1px solid rgba(128,128,128,.5);
+  position: absolute;
+  right: 0;
+  width: 200px;
+  margin-left: 0;
+  color: #eee;
 
   .section {
     margin-bottom: 20px;
 
     .title {
       position: relative;
-      border-bottom: 1px solid $border-grey;
+      border-bottom: 1px solid #222;
+      font-size: 11pt;
       padding-bottom: 2px;
 
       &.no_icon { padding-left: 8px; }
@@ -112,11 +126,18 @@
       }
 
       h5.title-header {
-        margin-left: 5px;
+        /*margin-left: 5px;*/
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #eee;
+        text-shadow: 0 0 2px black;
+        i {
+        	display: none;
+        }
       }
 
       h5 {
-        font-size: 12px;
+        font-size: 11pt;
         margin: 0;
         color: $text-dark-grey;
         font-weight: bold;

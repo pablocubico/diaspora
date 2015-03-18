@@ -8,6 +8,18 @@
     = javascript_include_tag :jsxc, :id => 'jsxc',
       :data => { :endpoint => get_bosh_endpoint }
 
+
+.colors
+  .theme.gray
+  .theme.blue
+  .theme.abstractred
+  .theme.yao
+  .theme.forest
+  .theme.darkforest
+  .theme.green
+  .theme.orange
+  .theme.abstractgreen
+
 .bootstrap_header_padding
 
 - if current_user.getting_started?
@@ -25,23 +37,24 @@
 
   = render 'shared/left_navbar'
 
-  .leftNavBarPadder
+  .leftNavBarPadder.rightBarPadder
 
     .container-fluid.no-gutter
       .row-fluid
         
-        .span10
+        .span12
           #aspect_stream_container.stream_container
             = render 'aspects/aspect_stream', :stream => @stream
 
-        .span2.rightBar
-          #selected_aspect_contacts.section
-            .title.no_icon
-              %h5.stream_title
-                = @stream.title
-            .content
+        .rightBar
+          .rightBarInnerPadding
+            #selected_aspect_contacts.section
+              .title.no_icon
+                %h5.stream_title
+                  = @stream.title
+              .content
 
-          = render 'shared/right_sections'
+            = render 'shared/right_sections'
 
-          %a{:id=>"back-to-top", :title=>"#{t('layouts.application.back_to_top')}", :href=>"#"}
-            &#8679;
+            %a{:id=>"back-to-top", :title=>"#{t('layouts.application.back_to_top')}", :href=>"#"}
+              &#8679;
