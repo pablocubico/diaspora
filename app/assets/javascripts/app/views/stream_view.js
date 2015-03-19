@@ -19,7 +19,7 @@ app.views.Stream = app.views.InfScroll.extend(_.extend(
 
     $(".theme").on("click", function(e) {
       e.preventDefault();
-      $("body").css("background", $(this).css("background"));
+      $("body").css("background-image", $(this).css("background-image"));
       $("body").css("background-attachment", "fixed");
     })
 
