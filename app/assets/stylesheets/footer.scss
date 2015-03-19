@@ -1,8 +1,12 @@
 footer {
-  width: 100%;
+  width: auto;
   left: 0;
   bottom: 0;
-  color: $text-grey;
+  color: #aaa;
+  padding-left: 200px;
+  padding-right: 200px;  left: 0;
+  bottom: 0;
+  color: white;
 
   .container {
     width: 95%;
@@ -40,7 +44,7 @@ footer {
     }
 
     a {
-      color: $link-grey;
+      color: white;
     }
   }
 }

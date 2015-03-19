@@ -4,7 +4,7 @@
 }
 
 body > header {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.9);*/
   background: #111;
   z-index: 1001;
   padding: 0;
@@ -22,10 +22,13 @@ body > header {
   }
 
   .diaspora_header_logo {
+    background: image_url("diaspora-header.png") !important;
     float: left;
-    margin-top: -6px;
-    height: 38px;
-    width: 65px;
+    margin-top: 0px;
+    height: 50px;
+    width: 149px;
+    background-position: 16px 10px !important;
+    background-repeat: no-repeat !important;
   }
 
   .ie-user-menu-active { height: 150px; }
@@ -99,11 +102,11 @@ body > header {
 
     #notification_badge, #conversations_badge {
       float: left;
-      padding: 0px 3px;
+      padding: 14px 3px;
     }
 
     #conversations_badge {
-      padding-top: 3px;
+      padding-top: 17px;
       margin-right: 0px;
       padding-right: 0px;
     }
@@ -218,6 +221,7 @@ body > header {
   #global_search {
     float: right;
     margin-right: 10px;
+    margin-top: 10px;
     position: relative;
 
     form {
@@ -309,7 +313,9 @@ body > header {
   }
 
   .user-menu-trigger {
-    padding: 10px 25px 10px 40px;
+    padding: 0px 35px 0px 55px;
+    line-height: 57px;
+    margin: 0;
 
     &:hover {
       color: $highlight-white;
@@ -329,16 +335,17 @@ body > header {
 
   .user-menu-more-indicator {
     position: absolute;
-    right: 5px;
+    right: 14px;
   }
 
   .user-menu-avatar {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     position: absolute;
     left: 8px;
-    top: 8px;
+    top: 10px;
     display: block;
+    border-radius: 30px;
   }
 
   .header-nav {

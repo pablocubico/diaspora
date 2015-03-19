@@ -94,7 +94,7 @@
 }
 
 .rightBarInnerPadding {
-  padding: 10px;
+  padding: 20px;
 }
 
 .rightBar {
@@ -111,11 +111,12 @@
 
     .title {
       position: relative;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid #444;
       font-size: 11pt;
       padding-bottom: 2px;
+      margin-left: 0;
 
-      &.no_icon { padding-left: 8px; }
+      &.no_icon { padding-left: 0px; }
 
       .right {
         right: 4px;
@@ -137,17 +138,26 @@
       }
 
       h5 {
-        font-size: 11pt;
-        margin: 0;
-        color: $text-dark-grey;
-        font-weight: bold;
+      	margin-top: 0;
+      	margin-bottom: 2px;
+        font-weight: 300;
+		color: #eee;
+		text-shadow: 0 0 2px black;
+		margin-left: 0;
       }
     }
 
+    ul.content {
+    	list-style: none;
+    	padding: 0;
+    	margin: 0;
+    	font-size: 11pt;
+    }    
+
     .content {
-      padding: 8px;
+      padding: 10px 0;
       color: $text-grey;
-      font-size: 11px;
+      font-size: 11pt;
 
       p, ul {
         margin: 5px 0px;

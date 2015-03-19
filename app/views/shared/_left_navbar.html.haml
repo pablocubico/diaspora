@@ -1,7 +1,7 @@
 .leftNavBarBackground
 #leftNavBar
   #home_user_badge
-    = owner_image_link
+    = person_image_link(current_user.person, :size => :large)
     %h4
       = link_to current_user.first_name, local_or_remote_person_path(current_user.person)
 

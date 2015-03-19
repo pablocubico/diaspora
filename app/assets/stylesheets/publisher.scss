@@ -6,6 +6,7 @@
     padding: 10px;
     background: rgba(255,255,255,.6);
     border: 1px solid rgba(255,255,255,.8);
+    box-shadow: 0 0 2px black;
   }
 
   &.closed {
@@ -17,7 +18,7 @@
       display: none !important;
     }
 
-    #publisher_textarea_wrapper { border: 1px solid $border-grey !important; }
+    #publisher_textarea_wrapper {  }
   }
 
   .mentions-autocomplete-list ul { width: 100% !important; }
@@ -52,9 +53,25 @@
     }
 
     #publisher_textarea_wrapper {
-      background-color: white;
-      border-radius: 3px;
+      transition: background .5s;
+      background: none;
       border: 1px solid $border-dark-grey;
+      border-radius: 0;
+
+      .mentions-input-box {
+        background: none;
+        border-radius: 0;
+        border: none;
+      }
+
+      &:hover {
+        transition: background .5s;
+        background: white;
+      }
+      &.active {
+        transition: background .5s;
+        background: white;
+      }
 
       input[type='text']#status_message_text {
         border: none;
@@ -63,11 +80,33 @@
       }
 
       textarea {
+        background: rgba(255,255,255,.45);
+        transition: background .5s;
         border: none;
         margin: 0;
         box-shadow: none;
         resize: none;
         height: 50px;
+        font-size: 12pt;
+        &::-webkit-input-placeholder {
+           color: #111;
+           font-weight: 300;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: #111;
+           font-weight: 300;  
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: #111;
+           font-weight: 300;  
+        }
+
+        &:-ms-input-placeholder {  
+           color: #111;
+           font-weight: 300;  
+        }
       }
 
       &.active textarea {

@@ -1,18 +1,30 @@
 .colors {
   position: fixed;
-  top: 0;
-  left: 50%;
-  margin-left: -300px;
+  top: 5px;
+  right: 450px;
+  padding: 5px;
+  background: rgba(0,0,0,.4);
   z-index: 9999;
+  cursor: pointer;
   .theme {
     background-size: cover;
-    border: 2px solid #999;
+    cursor: pointer;
     float: left;
     width: 30px;
     height: 30px;
-    border-radius: 40px;
+    border-radius: 4px;
     margin-right: 5px;
     &.green {
+      background: #0a5100; /* Old browsers */
+      background: -moz-linear-gradient(top,  #0a5100 0%, #0d3f05 0%, #1c8402 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0a5100), color-stop(0%,#0d3f05), color-stop(100%,#1c8402)); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  #0a5100 0%,#0d3f05 0%,#1c8402 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  #0a5100 0%,#0d3f05 0%,#1c8402 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  #0a5100 0%,#0d3f05 0%,#1c8402 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  #0a5100 0%,#0d3f05 0%,#1c8402 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a5100', endColorstr='#1c8402',GradientType=0 ); /* IE6-9 */
+    }
+    &.palegreen {
       background: #6ba593; /* Old browsers */
       background: -moz-linear-gradient(top,  #6ba593 0%, #b1eddf 50%, #e0f4ff 100%); /* FF3.6+ */
       background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6ba593), color-stop(50%,#b1eddf), color-stop(100%,#e0f4ff)); /* Chrome,Safari4+ */
