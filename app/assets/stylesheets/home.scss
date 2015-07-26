@@ -1,7 +1,15 @@
 body {
-  margin-top: 50px;
-  background-color: white;
-  background-image : none;
+  margin: 0px;
+  background-color: #FFF;
+  background-image: url("city-people-street-sun.jpg");
+  background-size: 100%;
+  background-position: center 0%;
+  animation: animatedBackground 20s ease alternate;
+}
+
+@keyframes animatedBackground {
+  from { background-position: center 0%; }
+  to { background-position: center -100%; }
 }
 
 li {
@@ -14,11 +22,12 @@ footer h3 {
 }
 
 footer {
-  margin-bottom: 12px;
+  margin-bottom: 0;
   padding: 42px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  width: auto
+  width: auto;
+  background: white;
 }
 
 #header {
@@ -29,6 +38,15 @@ footer {
 
   left: 0px;
   padding: 15px 0px;
+}
+
+#header h1.logo {
+  color: #FFF;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 29pt;
+  line-height: 1;
+  text-shadow: 0 2px 2px black;
 }
 
 #header img {
@@ -42,16 +60,34 @@ footer {
 
 #steps {
   text-align: center;
+  background: white;
+  padding: 40px;
+  margin: 0px;
 }
 
 #banner {
-  border-bottom : 1px solid #ccc;
-  border-top : 1px solid #eee;
+
+  background: rgba(0,0,0,.5);
+
   padding : 30px;
-  margin-top: 20px;
+  margin: 0 0 60px 0;
   text-align: center;
 
   box-shadow : 0 9px 15px -10px rgba(0,0,0,0.7);
+
+  h1 {
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 2px black;
+    font-size: 56pt;
+  }
+
+  h3 {
+    font-size: 21pt;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 2px 2px black;
+  }
 }
 
 #links {
@@ -73,6 +109,9 @@ footer {
   color: #999;
   text-align: center;
   font-style: italic;
+  margin: 0px;
+  padding: 20px;
+  background: rgb(34, 34, 34) none repeat scroll 0% 0%;
 }
 
 .helpful {
