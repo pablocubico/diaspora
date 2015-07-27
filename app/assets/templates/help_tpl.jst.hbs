@@ -1,11 +1,13 @@
-<div class="container">
-
-  <div id="section_header">
-    <h2 class="help_header">{{ title_header }}</h2>
-  </div>
+<div class="container-fluid">
 
   <div class="row">
-    <div class="col-md-3">
+    <div id="left-navbar-fixed-sub-background" class="col-lg-1 visible-lg"></div>
+    <div id="left-navbar-fixed-background" class="col-lg-2 col-md-3 hidden-sm hidden-xs"></div>
+    <div id="leftNavBar" class="col-lg-offset-1 col-lg-2 col-md-3">
+      <div id="section_header">
+        <h2 class="help_header">{{ title_header }}</h2>
+      </div>
+
       <div id='faq_nav'>
         <ul>
           <li>
@@ -76,9 +78,15 @@
           {{/if}}
         </ul>
       </div>
-    </div>
 
-    <div class="col-md-9 last" id=faq>
+    </div>   
+
+    <div class="col-md-9">
+      <div class="settings_container">
+        <div id="faq"></div>
+
+      </div>
     </div>
   </div>
+
 </div>

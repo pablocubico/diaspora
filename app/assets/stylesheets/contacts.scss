@@ -1,4 +1,5 @@
 #contacts_container {
+  
   #people_stream.contacts {
     .header {
       border-bottom: 1px solid $border-grey;
@@ -62,7 +63,22 @@
 }
 
 #aspect_nav {
-  li.aspect > a { padding-left: 30px; }
+  margin: 0 -15px;
+  background: none;
+  a {
+    background: transparent none repeat scroll 0% 0%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+    font-weight: normal !important;
+    border-width: 0 0 1px 0;
+    padding: 15px;
+    &.aspect {
+      background: #111;
+      cursor: move-ns;
+    }
+  }
+  li.aspect > a { 
+    padding-left: 30px; 
+  }
   li.new_aspect > a { padding-left: 30px; }
   li.aspect.ui-sortable-handle.ui-sortable-helper { background: #FFF; }
 }

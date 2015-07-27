@@ -7,7 +7,21 @@ body {
 #login,
 #forgot_password,
 #reset_password {
-  padding-top: 25px;
+
+  h1 {
+    margin-top: 0;
+    font-size: 40pt;
+    color: white;
+    font-family: Roboto;
+    margin-bottom: 40px;
+  }
+
+  padding: 50px;
+  display: block;
+  background: rgb(34, 34, 34) none repeat scroll 0% 0%;
+  margin: 130px auto 40px;
+  width: 400px;
+  border-radius: 5px;
 
   .logos-asterisk {
     margin: auto;

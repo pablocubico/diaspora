@@ -39,7 +39,8 @@ ul#help_nav {
         font-weight: normal;
       }
       .section-selected {
-        font-weight: bold;
+        color: #FFF;
+        font-weight: normal;
       }
     }
   }
@@ -78,13 +79,15 @@ ul#help_nav {
     }
 
     &.collapsed {
-      border: 2px solid rgb(242, 242, 242);
+      border: 1px solid rgb(242, 242, 242);
     }
 
     &.opened {
-      border: 2px solid rgb(142, 222, 61);
+      border: 1px solid #999;
+      box-shadow: 0px 0px 8px rgb(153, 153, 153);
+      border-radius: 0;
       h4 {
-        background-color: rgb(142, 222, 61);
+        background-color: #ccc;
       }
     }
     .answer {

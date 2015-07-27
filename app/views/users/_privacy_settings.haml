@@ -1,8 +1,13 @@
-= render 'shared/settings_nav'
+.row
+  #left-navbar-fixed-sub-background.col-lg-1.visible-lg
+  #left-navbar-fixed-background.col-lg-offset-1.col-lg-2.col-md-3.hidden-sm.hidden-xs
+  .col-lg-offset-1.col-lg-2.col-md-3#leftNavBar
 
-.container-fluid
-  .row
-    .col-lg-8.col-lg-offset-2
+    = render "shared/settings_nav"
+
+  .col-md-9
+    .settings_container
+
       .row
         .col-md-12
           %h3

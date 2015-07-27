@@ -1,32 +1,39 @@
 - content_for :page_title do
   = t('.title')
 
-.container-fluid#contacts_container
+
+%div.container-fluid
   .row
-    .col-md-3
-      = render 'contacts/sidebar'
+    #left-navbar-fixed-sub-background.col-lg-1.visible-lg
+    #left-navbar-fixed-background.col-lg-offset-1.col-lg-2.col-md-3.hidden-sm.hidden-xs
+    .col-lg-offset-1.col-lg-2.col-md-3#leftNavBar
+
+      #contacts_container
+        = render 'contacts/sidebar'
 
     .col-md-9
-      #people_stream.stream.contacts
-        = render 'contacts/header'
+      .settings_container
 
-        - if @contacts_size > 0
-          - if @aspect && @aspect.contacts.length == 0
-            .well
-              = t('.no_contacts_in_aspect')
-          #contact_stream
-            -# JS
+        #people_stream.stream.contacts
+          = render 'contacts/header'
 
-        - else
-          .no_contacts
-            %h3
-              = t('.no_contacts')
-            %p
-              != t('.no_contacts_message',
-                   :community_spotlight => link_to(t('.community_spotlight'), community_spotlight_path))
-            %p
-              .btn.btn-link{ 'data-toggle' => 'modal' }
-                = t('invitations.new.invite_someone_to_join')
+          - if @contacts_size > 0
+            - if @aspect && @aspect.contacts.length == 0
+              .well
+                = t('.no_contacts_in_aspect')
+            #contact_stream
+              -# JS
+
+          - else
+            .no_contacts
+              %h3
+                = t('.no_contacts')
+              %p
+                != t('.no_contacts_message',
+                     :community_spotlight => link_to(t('.community_spotlight'), community_spotlight_path))
+              %p
+                .btn.btn-link{ 'data-toggle' => 'modal' }
+                  = t('invitations.new.invite_someone_to_join')
 
 -if @aspect
   #new_conversation_pane

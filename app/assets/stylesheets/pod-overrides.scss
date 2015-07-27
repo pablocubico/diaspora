@@ -65,3 +65,33 @@ body {
     font-weight: 800;
     font-style: normal;
 }
+
+#left-navbar-fixed-sub-background {
+  background: rgba(0,0,0,.8);
+  position: fixed;
+  height: 100%;
+}
+
+#left-navbar-fixed-background {
+  background: rgba(0,0,0,.8);
+  position: fixed;
+  height: 100%;
+}
+
+#leftNavBar {
+  background: none;
+}
+
+h3.stream_title {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+#leftNavBar #aspects_list, #leftNavBar #tags_list {
+    background: rgba(40,40,40,.9);
+}
+
+#leftNavBar .hoverable a, #leftNavBar .all_aspects a.hoverable, #leftNavBar .followed_tags_sidebar a.hoverable {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(128,128,128,.3);
+}

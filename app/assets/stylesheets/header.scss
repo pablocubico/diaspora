@@ -3,6 +3,7 @@ header > .dark-header > nav {
   box-shadow: 1px 0 2px $black;
 
   .navbar-brand {
+    font-family: Roboto;
     font-weight: bold;
     font-size: $font-size-h3;
   }
@@ -21,9 +22,10 @@ header > .dark-header > nav {
         width: 150px;
       }
     }
-    .navbar-nav:not(.nav-badges) > li > a { font-weight: bold; }
+    .navbar-nav > li > a { border-left: 1px solid rgba(128,128,128,.3); text-shadow: 0 1px 2px black; }
     .nav-badges {
-      margin-left: 20px;
+      margin-left: 0px;
+      border-right: 1px solid rgba(128,128,128,.3);
       & > li { height: 50px; }
       .dropdown > a:focus { outline: 0px none; }
       .dropdown-open {
@@ -80,6 +82,8 @@ header > .dark-header > nav {
       color: inherit;
       font-size: $font-size-h3;
       vertical-align: middle;
+      margin-right: -3px;
+      display: block;
     }
     .nav-badge {
       margin-bottom: -2px;
@@ -93,8 +97,9 @@ header > .dark-header > nav {
     #user_menu {
       &.open .dropdown-toggle { background-color: darken($navbar-inverse-bg, 7%); }
       .dropdown-toggle {
-        margin: 0 1px;
+        margin: 0;
         min-width: 160px;
+        border: none;
       }
       .dropdown-menu {
         background-color: darken($navbar-inverse-bg, 7%);
@@ -102,7 +107,8 @@ header > .dark-header > nav {
         width: 100%;
         & > li > a {
           color: $gray-light;
-          padding-left: 55px;
+          padding: 10px 15px;
+          border-top: 1px solid #333;
           &:hover {
             background-color: $link-color;
             color: $gray-lighter;

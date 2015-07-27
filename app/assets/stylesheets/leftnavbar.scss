@@ -43,6 +43,7 @@
   .all_aspects a.hoverable.selected, .followed_tags_sidebar a.hoverable.selected {
     color: white;
     background: #666;
+    text-shadow: 0 1px 2px black;
   }
 
   .hoverable a, .all_aspects a.hoverable, .followed_tags_sidebar a.hoverable {
@@ -54,6 +55,7 @@
     &:hover, &:hover .entypo.check, &:hover + .action .entypo { 
       background-color: $blue;
       color: $white;
+      text-shadow: 0 1px 2px black;
     }
   }
 
@@ -81,8 +83,9 @@
       line-height: 25px;
 
       a { 
-        color: $black; 
-        font-weight: normal;
+        color: #f0f0f0;
+        font-weight: 700;
+        font-size: 14pt;
       }
     }
   }
@@ -188,5 +191,16 @@
       border-color: $background-blue;
     }
     /* ---- end override app/stylesheets/vendor/autoSuggest.css ---- */
+  }
+
+  #section_header {
+    h2 {
+      color: #FFF;
+      font-weight: 700;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      margin-top: 0;
+      font-size: 18pt;
+    }
   }
 }
