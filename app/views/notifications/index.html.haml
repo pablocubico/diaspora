@@ -1,6 +1,9 @@
-.container-fluid#notifications_container
+%div.container-fluid#notifications_container
   .row
-    .col-md-3
+    #left-navbar-fixed-sub-background.col-lg-1.visible-lg
+    #left-navbar-fixed-background.col-lg-offset-1.col-lg-2.col-md-3.hidden-sm.hidden-xs
+    .col-lg-offset-1.col-lg-2.col-md-3#leftNavBar
+
       %h3
         = t('.notifications')
       .list-group
@@ -24,7 +27,7 @@
                 %i.entypo-reshare
               - when 'started_sharing'
                 %i.entypo-add-user
-            = t('.'+key)
+            = t('.'+key)   
 
     .col-md-9.stream.notifications
       .row.header

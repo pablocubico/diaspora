@@ -1,7 +1,8 @@
 body {
   background-image: url("/assets/city-people-street-sun.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  background-attachment: fixed;
 }
 
 #login,

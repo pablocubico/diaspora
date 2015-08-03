@@ -7,19 +7,6 @@
     = javascript_include_tag :jsxc, id: 'jsxc',
       data: { endpoint: get_bosh_endpoint }
 
-- if current_user.getting_started?
-  #welcome-to-diaspora
-    .container
-      .row
-        .col-md-8.offset1
-          %h1
-            = t('aspects.index.welcome_to_diaspora', name: current_user.first_name)
-          %h3
-            = t('aspects.index.introduce_yourself')
-        .col-md-2
-          .pull-right
-            = link_to '&times;'.html_safe, getting_started_completed_path, id: "gs-skip-x", class: "close"
-
 %div.container-fluid
   #right-sidebar-fixed-sub-background.col-md-3.visible-lg
   #right-sidebar-fixed-background.col-md-3.col-lg-2.hidden-sm.hidden-xs
@@ -45,6 +32,20 @@
           = render 'tags/followed_tags_listings'
 
     .col-md-6
+
+      - if current_user.getting_started?
+        #welcome-to-diaspora
+          .container-fluid
+            .row
+              .col-md-8.offset1
+                %h1
+                  = t('aspects.index.welcome_to_diaspora', name: current_user.first_name)
+                %h3
+                  = t('aspects.index.introduce_yourself')
+              .col-md-2
+                .pull-right
+                  = link_to '&times;'.html_safe, getting_started_completed_path, id: "gs-skip-x", class: "close"
+
       #aspect_stream_container.stream_container
         = render 'aspects/aspect_stream', stream: @stream
 

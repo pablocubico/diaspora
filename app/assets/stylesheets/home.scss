@@ -1,15 +1,16 @@
 body {
   margin: 0px;
   background-color: #FFF;
-  background-image: url("city-people-street-sun.jpg");
+  background-image: url("city-people-eiffel-tower.jpg");
   background-size: 100%;
   background-position: center 0%;
-  animation: animatedBackground 20s ease alternate;
+  animation: animatedBackground 20s ease infinite;
+  animation-direction: alternate;
 }
 
 @keyframes animatedBackground {
-  from { background-position: center 0%; }
-  to { background-position: center -100%; }
+  from { background-position: center 0; }
+  to { background-position: center -371px; }
 }
 
 li {
@@ -17,6 +18,9 @@ li {
 }
 
 footer h3 {
+  margin-top: 0;
+  color: white;
+  font-weight: 700;
   margin-bottom: 25px;
   text-align: center;
 }
@@ -24,10 +28,16 @@ footer h3 {
 footer {
   margin-bottom: 0;
   padding: 42px;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   width: auto;
-  background: white;
+}
+
+#page {
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
+#footer {
+  background: #222;
 }
 
 #header {
@@ -46,16 +56,18 @@ footer {
   font-weight: bold;
   font-size: 29pt;
   line-height: 1;
-  text-shadow: 0 2px 2px black;
+  /*text-shadow: 0 2px 2px black;*/
+  margin-top: 30px;
+  margin-bottom: -5px;
 }
 
 #header img {
-  margin-left: 15px;
+  width: 150px;
 }
 
 #login-link {
   float: right;
-  margin-right: 15px;
+  margin-right: 0;
 }
 
 #steps {
@@ -63,6 +75,9 @@ footer {
   background: white;
   padding: 40px;
   margin: 0px;
+  h2 {
+    font-weight: 700;
+  }
 }
 
 #banner {
@@ -111,13 +126,10 @@ footer {
   font-style: italic;
   margin: 0px;
   padding: 20px;
-  background: rgb(34, 34, 34) none repeat scroll 0% 0%;
+  background: #111;
 }
 
 .helpful {
   cursor: help;
 }
 
-.row {
-  margin-bottom: 60px;
-}

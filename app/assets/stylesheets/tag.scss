@@ -1,6 +1,6 @@
 .tag {
   display: inline-block;
-  font-weight: bold;
+  font-weight: 600;
   &:hover {
     text-decoration: underline;
     background-color: lighten($blue, 47%);
